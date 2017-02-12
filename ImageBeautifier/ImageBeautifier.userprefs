@@ -1,9 +1,10 @@
 ﻿<Properties StartupConfiguration="{3CE2A043-E4AA-4476-85BD-4E88B9DF3840}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="ImageBeautifier/ExtBitmap.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="App_Start/WebApiConfig.cs">
     <Files>
-      <File FileName="ImageBeautifier/Views/Home/Index.cshtml" Line="12" Column="28" />
-      <File FileName="ImageBeautifier/Controllers/HomeController.cs" Line="69" Column="4" />
-      <File FileName="ImageBeautifier/ExtBitmap.cs" Line="11" Column="1" />
+      <File FileName="Views/Home/Index.cshtml" Line="5" Column="14" />
+      <File FileName="Controllers/HomeController.cs" Line="1" Column="1" />
+      <File FileName="App_Start/RouteConfig.cs" Line="1" Column="1" />
+      <File FileName="App_Start/WebApiConfig.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

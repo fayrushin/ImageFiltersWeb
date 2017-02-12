@@ -1,31 +1,56 @@
-﻿@{  var imagePath= "";
-    if( Request["photoChoice"] != null){
-        imagePath = @"images\" + Request["photoChoice"];
-   }
+﻿@{  WebImage photo = null;
+    var newFileName = "";
+    var imagePath = "";
+
+    if(IsPost){
+        photo = WebImage.GetImageFromRequest();
+        if(photo != null){
+            newFileName = Guid.NewGuid().ToString() + "_" +
+                Path.GetFileName(photo.FileName);
+            imagePath = @"images/" + newFileName;
+
+            photo.Save(@"~/" + imagePath);
+        }
+    }
 }
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Display Image on the Fly</title>
+  <title>Image Upload</title>
 </head>
 <body>
-<h1>Displaying an Image On the Fly</h1>
-<form method="post" action="">
-    <div>
-        I want to see:
-        <select name="photoChoice">
-            <option value="img1.jpg">Photo 1</option>
-            <option value="img2.jpg">Photo 2</option>
-            <option value="img3.jpg">Photo 3</option>
-        </select>
-        &nbsp;
-        <input type="submit" value="Submit" />
+  <form action="" method="post" enctype="multipart/form-data">
+    <fieldset>
+      <legend> Upload Image </legend>
+      <label for="Image">Image</label>
+      <input type="file" name="Image" />
+      <br/>
+      <input type="submit" value="Upload" />
+    </fieldset>
+  </form>
+  <h1>Uploaded Image</h1>
+    @if(imagePath != ""){
+    <div class="source">
+        <img id="image1" src="@imagePath" alt="image" />
     </div>
-    <div style="padding:10px;">
-        @if(imagePath != ""){
-            <img src="@imagePath" alt="Sample Image" width="300px" />
-        }
+    }
+	<div class="filtered">
+        <img id="image2" src="" alt="image2" />
     </div>
-</form>
+		
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script>
+    function sepiaImage(item) {
+        var url = "/Home/SepiaImage";
+        $.post(url, { Name: item }, function (data) {
+<!--			document.getElementById("button1").value = data;-->
+			document.getElementById("image2").src = data;
+<!--            window.location.href = "/Home/Index";-->
+        });
+    }
+	</script>
+	<div> <input type="button" id="button1" value="Apply sepia" onclick="sepiaImage('@imagePath');" /></div>
+
+
 </body>
 </html>

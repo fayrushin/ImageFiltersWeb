@@ -41,9 +41,53 @@ namespace ImageBeautifier.Controllers
 			{
 				Console.WriteLine("The file is not found in: {0}",name);
 			}
-			catch (Exception ex)
+			return "";
+		}
+		public string NegativeImage(string name)
+		{
+			try
 			{
-				Console.WriteLine(ex.Message);
+				var image = Image.FromFile(name);
+				var negativeImage = image.DrawAsNegative();
+				var newImagePath = Guid.NewGuid() + "negative.png";
+				negativeImage.Save(newImagePath);
+				return newImagePath;
+			}
+			catch (FileNotFoundException)
+			{
+				Console.WriteLine("The file is not found in: {0}", name);
+			}
+			return "";
+		}
+		public string TransparImage(string name)
+		{
+			try
+			{
+				var image = Image.FromFile(name);
+				var transparImage = image.DrawWithTransparency();
+				var newImagePath = Guid.NewGuid() + "transpar.png";
+				transparImage.Save(newImagePath);
+				return newImagePath;
+			}
+			catch (FileNotFoundException)
+			{
+				Console.WriteLine("The file is not found in: {0}", name);
+			}
+			return "";
+		}
+		public string GrayscaleImage(string name)
+		{
+			try
+			{
+				var image = Image.FromFile(name);
+				var grayscaleImage = image.DrawAsGrayscale();
+				var newImagePath = Guid.NewGuid() + "grayscale.png";
+				grayscaleImage.Save(newImagePath);
+				return newImagePath;
+			}
+			catch (FileNotFoundException)
+			{
+				Console.WriteLine("The file is not found in: {0}", name);
 			}
 			return "";
 		}

@@ -1,0 +1,16 @@
+/Users/ravil/Projects/ImageBeautifier/ImageBeautifier/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/Users/ravil/Projects/ImageBeautifier/ImageBeautifier/bin/ImageBeautifier.dll.mdb
+/Users/ravil/Projects/ImageBeautifier/ImageBeautifier/bin/ImageBeautifier.dll
+/Users/ravil/Projects/ImageBeautifier/ImageBeautifier/obj/Debug/ImageBeautifier.dll
+/Users/ravil/Projects/ImageBeautifier/ImageBeautifier/obj/Debug/ImageBeautifier.dll.mdb
+/Users/ravil/Projects/ImageBeautifier/ImageBeautifier/bin/System.Web.Razor.dll
+/Users/ravil/Projects/ImageBeautifier/ImageBeautifier/bin/Microsoft.Web.Infrastructure.dll
+/Users/ravil/Projects/ImageBeautifier/ImageBeautifier/bin/System.Web.Helpers.dll
+/Users/ravil/Projects/ImageBeautifier/ImageBeautifier/bin/System.Web.WebPages.Deployment.dll
+/Users/ravil/Projects/ImageBeautifier/ImageBeautifier/bin/System.Web.WebPages.dll
+/Users/ravil/Projects/ImageBeautifier/ImageBeautifier/bin/System.Web.WebPages.Razor.dll
+/Users/ravil/Projects/ImageBeautifier/ImageBeautifier/bin/System.Web.Mvc.dll
+/Users/ravil/Projects/ImageBeautifier/ImageBeautifier/bin/System.Net.Http.Formatting.dll
+/Users/ravil/Projects/ImageBeautifier/ImageBeautifier/bin/System.Web.Http.dll
+/Users/ravil/Projects/ImageBeautifier/ImageBeautifier/bin/System.Web.Http.WebHost.dll
+/Users/ravil/Projects/ImageBeautifier/ImageBeautifier/bin/Newtonsoft.Json.dll

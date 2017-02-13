@@ -32,7 +32,7 @@ namespace ImageBeautifier.Controllers
 			try
 			{
 				var image = Image.FromFile(name);
-				var sepiaImage = image.DrawAsGrayscale();
+				var sepiaImage = image.DrawAsSepiaTone();
 				var newImagePath = "images/"+Guid.NewGuid() + "sepia.png";
 				sepiaImage.Save(newImagePath);
 				return newImagePath;

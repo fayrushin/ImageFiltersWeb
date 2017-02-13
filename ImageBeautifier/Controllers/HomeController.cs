@@ -33,7 +33,7 @@ namespace ImageBeautifier.Controllers
 			{
 				var image = Image.FromFile(name);
 				var sepiaImage = image.DrawAsGrayscale();
-				var newImagePath = Guid.NewGuid() + "sepia.png";
+				var newImagePath = "images/"+Guid.NewGuid() + "sepia.png";
 				sepiaImage.Save(newImagePath);
 				return newImagePath;
 			}
@@ -49,7 +49,7 @@ namespace ImageBeautifier.Controllers
 			{
 				var image = Image.FromFile(name);
 				var negativeImage = image.DrawAsNegative();
-				var newImagePath = Guid.NewGuid() + "negative.png";
+				var newImagePath = "images/"+Guid.NewGuid() + "negative.png";
 				negativeImage.Save(newImagePath);
 				return newImagePath;
 			}
@@ -65,7 +65,7 @@ namespace ImageBeautifier.Controllers
 			{
 				var image = Image.FromFile(name);
 				var transparImage = image.DrawWithTransparency();
-				var newImagePath = Guid.NewGuid() + "transpar.png";
+				var newImagePath = "images/"+Guid.NewGuid() + "transpar.png";
 				transparImage.Save(newImagePath);
 				return newImagePath;
 			}
@@ -81,7 +81,7 @@ namespace ImageBeautifier.Controllers
 			{
 				var image = Image.FromFile(name);
 				var grayscaleImage = image.DrawAsGrayscale();
-				var newImagePath = Guid.NewGuid() + "grayscale.png";
+				var newImagePath = "images/"+Guid.NewGuid() + "grayscale.png";
 				grayscaleImage.Save(newImagePath);
 				return newImagePath;
 			}

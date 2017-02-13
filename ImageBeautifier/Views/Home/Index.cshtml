@@ -52,6 +52,7 @@ a:hover {
 </style>
 </head>
 <body>
+<div class="gallery" align="center">
   <form action="" method="post" enctype="multipart/form-data">
     <fieldset>
       <legend> Upload Image </legend>
@@ -63,11 +64,11 @@ a:hover {
   </form>
   <h1>Uploaded Image</h1>
     @if(imagePath != ""){
-    <div class="preview">
+    <div class="preview" align="center">
         <img id="image1" src="@imagePath" alt="image" />
     </div>
     }
-	<div class="preview">
+	<div class="preview" align="center">
         <img id="image2" src="" alt="image2" />
     </div>
 		
@@ -98,13 +99,13 @@ a:hover {
         });
     }
 	</script>
-	<div class="buttons"> 
+	<div class="buttons" align="center"> 
 		<input type="button" value="Apply sepia" onclick="sepiaImage('@imagePath');" />
 		<input type="button" value="Apply negative" onclick="negativeImage('@imagePath');" />
 		<input type="button" value="Apply transparency" onclick="transparImage('@imagePath');" />
 		<input type="button" value="Apply grayscale" onclick="grayscaleImage('@imagePath');" />
 	</div>
 
-
+</div>
 </body>
 </html>
